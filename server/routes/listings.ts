@@ -1,5 +1,5 @@
 import express from "express"
-import { WithId, Document } from "mongodb"
+import { WithId, Document, ObjectId } from "mongodb"
 import db from "../db/conn"
 const router = express.Router()
 
@@ -9,11 +9,26 @@ router.get("/", async (req, res) => {
   res.send(results).status(200)
 })
 
+router.get("/:id", async (req, res) => {
+  let collection = db.collection("listingsAndReviews")
+  let query = { _id: new ObjectId(req.params.id) }
+  let result = await collection.findOne(query)
+
+  if (!result) res.send("Not found").status(404)
+  else res.send(result).status(200)
+})
+
 router.post("/", async (req, res) => {
   let collection = db.collection("listingsAndReviews")
   const newListing = req.body
   const results = await collection.insertOne(newListing)
   res.send(results).status(200)
+})
+
+router.put("/", async (req, res) => {
+  let collection = db.collection("listingsAndReviews")
+  // const results = await collection
+  // res.send(results).status(200)
 })
 
 export default router

@@ -1,7 +1,20 @@
 import express from "express"
-import { WithId, Document, ObjectId } from "mongodb"
+import { ObjectId } from "mongodb"
 import db from "../db/conn"
 const router = express.Router()
+
+const myLogger = function (req, res, next: () => void) {
+  console.log("LOGGED")
+  next()
+}
+
+const myNextLogger = function (req, res, next: () => void) {
+  console.log("LOGGED NEXT")
+  next()
+}
+
+router.use(myLogger)
+router.use(myNextLogger)
 
 router.get("/", async (req, res) => {
   let collection = db.collection("listingsAndReviews")

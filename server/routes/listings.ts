@@ -41,4 +41,18 @@ router.put("/:id", async (req, res) => {
   }
 })
 
+router.delete("/:id", async (req, res) => {
+  let collection = db.collection("listingsAndReviews")
+  const id = new ObjectId(req.params.id)
+
+  const result = await collection.deleteOne({ _id: id })
+  console.log(result)
+
+  if (result.deletedCount === 0) {
+    res.status(404).send("User not found")
+  } else {
+    res.status(200).send("User deleted successfully")
+  }
+})
+
 export default router

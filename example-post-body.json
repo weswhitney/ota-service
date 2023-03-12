@@ -1,0 +1,147 @@
+{
+  "listing_url": "https://www.awesomenewlisting.com",
+  "name": "Cool new place to stay",
+  "summary": "Fantastic summary",
+  "space": "Radical Space",
+  "description": "totally radical place to stay by downtown restaurants",
+  "neighborhood_overview": "radical neighborhood activties",
+  "notes": "close to the grocery store",
+  "transit": "rtd",
+  "access": "We are always available to help guests",
+  "interaction": "Cot - 10 € / night Dog - € 7,5 / night",
+  "house_rules": "Make the house your home...",
+  "property_type": "House",
+  "room_type": "Entire home/apt",
+  "bed_type": "Real Bed",
+  "minimum_nights": "2",
+  "maximum_nights": "30",
+  "cancellation_policy": "moderate",
+  "last_scraped": {
+    "$date": "2019-02-16T05:00:00Z"
+  },
+  "calendar_last_scraped": {
+    "$date": "2019-02-16T05:00:00Z"
+  },
+  "first_review": {
+    "$date": "2016-01-03T05:00:00Z"
+  },
+  "last_review": {
+    "$date": "2019-01-20T05:00:00Z"
+  },
+  "accommodates": 8,
+  "bedrooms": 3,
+  "beds": 5,
+  "number_of_reviews": 51,
+  "bathrooms": {
+    "$numberDecimal": "1.0"
+  },
+  "amenities": [
+    "TV",
+    "Cable TV",
+    "Wifi",
+    "Kitchen",
+    "Paid parking off premises",
+    "Smoking allowed",
+    "Pets allowed",
+    "Buzzer/wireless intercom",
+    "Heating",
+    "Family/kid friendly",
+    "Washer",
+    "First aid kit",
+    "Fire extinguisher",
+    "Essentials",
+    "Hangers",
+    "Hair dryer",
+    "Iron",
+    "Pack ’n Play/travel crib",
+    "Room-darkening shades",
+    "Hot water",
+    "Bed linens",
+    "Extra pillows and blankets",
+    "Microwave",
+    "Coffee maker",
+    "Refrigerator",
+    "Dishwasher",
+    "Dishes and silverware",
+    "Cooking basics",
+    "Oven",
+    "Stove",
+    "Cleaning before checkout",
+    "Waterfront"
+  ],
+  "price": {
+    "$numberDecimal": "80.00"
+  },
+  "security_deposit": {
+    "$numberDecimal": "200.00"
+  },
+  "cleaning_fee": {
+    "$numberDecimal": "35.00"
+  },
+  "extra_people": {
+    "$numberDecimal": "15.00"
+  },
+  "guests_included": {
+    "$numberDecimal": "6"
+  },
+  "images": {
+    "thumbnail_url": "",
+    "medium_url": "",
+    "picture_url": "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+    "xl_picture_url": ""
+  },
+  "host": {
+    "host_id": "51399391-z",
+    "host_url": "https://www.airbnb.com/users/show/51399391-testerinsert",
+    "host_name": "Billy Bob",
+    "host_location": "Porto, Porto District, Portugal",
+    "host_about": "Gostamos de passear, de viajar, de conhecer pessoas e locais novos, gostamos de desporto e animais! Vivemos na cidade mais linda do mundo!!!",
+    "host_response_time": "within an hour",
+    "host_thumbnail_url": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+    "host_picture_url": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_x_medium",
+    "host_neighbourhood": "",
+    "host_response_rate": 100,
+    "host_is_superhost": false,
+    "host_has_profile_pic": true,
+    "host_identity_verified": true,
+    "host_listings_count": 3,
+    "host_total_listings_count": 3,
+    "host_verifications": [
+      "email",
+      "phone",
+      "reviews",
+      "jumio",
+      "offline_government_id",
+      "government_id"
+    ]
+  },
+  "address": {
+    "street": "Porto, Porto, Portugal",
+    "suburb": "",
+    "government_area": "Cedofeita, Ildefonso, Sé, Miragaia, Nicolau, Vitória",
+    "market": "Porto",
+    "country": "Portugal",
+    "country_code": "PT",
+    "location": {
+      "type": "Point",
+      "coordinates": [-8.61308, 41.1413],
+      "is_location_exact": false
+    }
+  },
+  "availability": {
+    "availability_30": 28,
+    "availability_60": 47,
+    "availability_90": 74,
+    "availability_365": 239
+  },
+  "review_scores": {
+    "review_scores_accuracy": 9,
+    "review_scores_cleanliness": 9,
+    "review_scores_checkin": 10,
+    "review_scores_communication": 10,
+    "review_scores_location": 10,
+    "review_scores_value": 9,
+    "review_scores_rating": 89
+  },
+  "reviews": []
+}

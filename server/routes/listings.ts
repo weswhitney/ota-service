@@ -3,11 +3,13 @@ import { ObjectId } from "mongodb"
 import db from "../db/conn"
 const router = express.Router()
 
+// custom middleware
 const myLogger = function (req, res, next: () => void) {
   console.log("LOGGED")
   next()
 }
 
+// custom middlware
 const myNextLogger = function (req, res, next: () => void) {
   console.log("LOGGED NEXT")
   next()
@@ -66,6 +68,12 @@ router.delete("/:id", async (req, res) => {
   } else {
     res.status(200).send("User deleted successfully")
   }
+})
+
+// custom error-handling middleware example
+router.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send("Something broke!")
 })
 
 export default router

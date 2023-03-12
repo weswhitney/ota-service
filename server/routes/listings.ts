@@ -3,13 +3,13 @@ import { ObjectId } from "mongodb"
 import db from "../db/conn"
 const router = express.Router()
 
-// custom middleware
+// custom middleware router-level middleware This code is executed for every request to the router
 const myLogger = function (req, res, next: () => void) {
   console.log("LOGGED")
   next()
 }
 
-// custom middlware
+// custom middleware router-level middleware This code is executed for every request to the router
 const myNextLogger = function (req, res, next: () => void) {
   console.log("LOGGED NEXT")
   next()

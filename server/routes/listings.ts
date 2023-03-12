@@ -11,7 +11,8 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   let collection = db.collection("listingsAndReviews")
-  let query = { _id: new ObjectId(req.params.id) }
+  const id = new ObjectId(req.params.id)
+  let query = { _id: id }
   let result = await collection.findOne(query)
 
   if (!result) res.send("Not found").status(404)
@@ -25,10 +26,19 @@ router.post("/", async (req, res) => {
   res.send(results).status(200)
 })
 
-router.put("/", async (req, res) => {
+router.put("/:id", async (req, res) => {
   let collection = db.collection("listingsAndReviews")
-  // const results = await collection
-  // res.send(results).status(200)
+  const id = new ObjectId(req.params.id)
+  const listingData = req.body
+
+  const result = await collection.updateOne({ _id: id }, { $set: listingData })
+  console.log(result)
+
+  if (result.modifiedCount === 0) {
+    res.status(404).send("User not found")
+  } else {
+    res.status(200).send("User data updated successfully")
+  }
 })
 
 export default router

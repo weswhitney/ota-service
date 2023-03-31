@@ -4,19 +4,12 @@ import db from "../db/conn"
 const router = express.Router()
 
 // custom middleware router-level middleware This code is executed for every request to the router
-const myLogger = function (req, res, next: () => void) {
-  console.log("LOGGED")
-  next()
-}
-
-// custom middleware router-level middleware This code is executed for every request to the router
-const myNextLogger = function (req, res, next: () => void) {
-  console.log("LOGGED NEXT")
+const myLogger = function (req: any, res: any, next: () => void) {
+  console.log("LOGGED LISTINGS")
   next()
 }
 
 router.use(myLogger)
-router.use(myNextLogger)
 
 router.get("/", async (req, res) => {
   let collection = db.collection("listingsAndReviews")
@@ -71,7 +64,7 @@ router.delete("/:id", async (req, res) => {
 })
 
 // custom error-handling middleware example
-router.use((err, req, res, next) => {
+router.use((err: any, req: any, res: any, next: any) => {
   console.error(err.stack)
   res.status(500).send("Something broke!")
 })
